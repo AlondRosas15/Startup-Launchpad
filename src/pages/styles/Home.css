@@ -1,0 +1,77 @@
+.home-container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('./6100144.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e0d4f7;
+    filter: brightness(0.8); /* Slightly reduce brightness */
+}
+
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    z-index: 1;
+}
+
+.home-header,
+.home-name {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    color: #ffffff; /* Bright white text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+
+}
+.services-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent card feel */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #e0e0ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #d0d0ff;
+}
