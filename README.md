@@ -1,3 +1,7 @@
+This is an ongoing full-stack application that presents the developer's freelance services for potential customers.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
