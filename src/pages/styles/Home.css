@@ -1,19 +1,24 @@
 .home-container {
-    position: relative;
-    min-height: 100vh;
-    background-image: url('./6100144.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: #e0d4f7;
-    filter: brightness(0.8); /* Slightly reduce brightness */
+  position: relative;
+  min-height: 100vh;
+  background-image: url('./6100144.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-family: 'Courier New', Courier, monospace;
+  color: #e0d4f7;
+  padding: 2rem 1rem; /* ⬅ Add padding to prevent edge overflow */
+  box-sizing: border-box; /* ⬅ Ensures padding is included in sizing */
+  overflow-x: hidden;     /* ⬅ Prevents horizontal scroll */
 }
+
 
 .home-container::before {
     content: '';
@@ -22,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 40% opacity */
     z-index: 1;
 }
 
@@ -75,3 +80,159 @@
     line-height: 1.5;
     color: #d0d0ff;
 }
+
+@media (max-width: 768px) {
+    .home-container {
+      padding: 1rem;
+      justify-content: flex-start; /* More natural layout on smaller screens */
+      text-align: center;
+    }
+  
+    .home-header,
+    .home-name {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  
+    .services-section {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .service-card {
+      padding: 1rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .service-card p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-header,
+    .home-name {
+      font-size: 1.5rem;
+    }
+  
+    .service-card {
+      padding: 0.75rem;
+    }
+  
+    .services-section {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .plans-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #1f0137;
+    color: white;
+    border-radius: 12px; /* Add rounded corners */
+  }
+  
+  .plans-heading {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .plans-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .plan-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #9c27b0;
+    border-radius: 16px;
+    padding: 30px;
+    width: 280px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 
+  }
+  
+  .plan-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .plan-card h3 {
+    font-size: 24px;
+    color: #ffb74d;
+    margin-bottom: 10px;
+  }
+  
+  .plan-price {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .plan-card ul li {
+    margin-bottom: 10px;
+    color: #dcdcdc;
+  }
+  
+  .select-plan {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    z-index: 2; /* <-- Add this */
+    position: relative; /* <-- Required for z-index to work */
+  }
+  
+  
+  .select-plan:hover {
+    background-color: #218838;
+  }
+  
+  .pro .select-plan {
+    background-color: #007bff; /* Blue for Upgrade */
+  }
+  
+  .pro .select-plan:hover {
+    background-color: #0056b3;
+  }
+  
+      .text-box {
+        background: #9c27b0; /* Light opaque background */
+        border: 2px solid #9c27b0; /* Border color */
+        border-radius: 16px; /* Rounded corners */
+        padding: 50px 30px; /* Increase padding to make the box taller */
+        width: 150%; /* Full width by default */
+        max-width: 800px; /* Limit the maximum width */
+        margin: 20px auto; /* Center the box and add spacing */
+        text-align: center; /* Center-align the text */
+        color: #ffffff; /* Dark text for better contrast */
+        font-size: 1rem; /* Adjust font size */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        min-height: 200px; /* Set a minimum height to make the box longer */
+      }
+      
+      .text-box:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+      }

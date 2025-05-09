@@ -1,0 +1,87 @@
+.profile-container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('./6100144.jpg'); /* You can use the same or a different background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e0d4f7;
+    filter: brightness(0.85);
+}
+
+.profile-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffb74d;
+}
+
+.profile-details {
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.profile-details p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.profile-settings {
+  text-align: center;
+}
+
+.profile-settings h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffb74d;
+}
+
+.profile-dashboard {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+.profile-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.profile-button:hover {
+  background-color: #0056b3;
+}
+
+.text-box {
+  background: #9c27b0; /* Light opaque background */
+  border: 2px solid #9c27b0; /* Border color */
+  border-radius: 16px; /* Rounded corners */
+  padding: 50px 30px; /* Increase padding to make the box taller */
+  width: 150%; /* Full width by default */
+  max-width: 800px; /* Limit the maximum width */
+  margin: 20px auto; /* Center the box and add spacing */
+  text-align: center; /* Center-align the text */
+  color: #ffffff; /* Dark text for better contrast */
+  font-size: 1rem; /* Adjust font size */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  min-height: 200px; /* Set a minimum height to make the box longer */
+  transition: none; /* Disable all transitions */
+}
+
+.text-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}

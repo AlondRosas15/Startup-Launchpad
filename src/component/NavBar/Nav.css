@@ -1,41 +1,121 @@
 /* Navbar container styling */
 .navbar {
-    background-color: #8552b1;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+  background-color: #8552b1;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Logo styling */
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent the logo from wrapping */
+}
+
+/* Navigation links styling */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Add spacing between list items */
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Align items vertically */
+  justify-content: flex-end; /* Align links to the right */
+}
+
+/* Individual list items */
+.navbar ul li {
+  display: flex;
+  align-items: center;
+}
+
+/* Links and buttons */
+.navbar ul li a,
+.navbar ul li button {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: #c86a23;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 100px; /* Ensure consistent button width */
+  text-align: center; /* Center-align text */
+}
+
+/* Hover effect */
+.navbar ul li a:hover,
+.navbar ul li button:hover {
+  background-color: #a6521a;
+}
+
+/* Distinct styling for the Sign Out button */
+.navbar ul li button.sign-out-btn {
+  background-color: #e63946; /* Red for Sign Out */
+}
+
+.navbar ul li button.sign-out-btn:hover {
+  background-color: #b71c1c; /* Darker red on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
   }
- 
-  /* Logo styling */
-  .navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
- 
-  /* Navigation links styling */
+
   .navbar ul {
-    list-style: none;
-    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Reduce spacing */
+    width: 100%; /* Make the navbar take full width */
   }
- 
+
   .navbar ul li {
-    margin-left: 20px;
+    width: 100%; /* Make each item take full width */
   }
- 
-  .navbar ul li a {
+
+    /* Links and buttons */
+  .navbar ul li a,
+  .navbar ul li button {
     text-decoration: none;
     color: #fff;
-    padding: 8px 12px;
-    transition: background-color 0.3s;
+    padding: 10px 20px; /* Consistent padding for all buttons */
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #c86a23;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 120px; /* Ensure consistent button width */
+    height: 40px; /* Ensure consistent button height */
+    display: flex;
+    justify-content: center; /* Center-align text horizontally */
+    align-items: center; /* Center-align text vertically */
+    text-align: center;
   }
-/* Distinct styling for the Sign In/Login button */
-.navbar ul li a.sign-in {
-background-color: #c86a23;  /* Change to desired standout color */
-border-radius: 4px;
-font-weight: bold;
+  
+  /* Hover effect */
+  .navbar ul li a:hover,
+  .navbar ul li button:hover {
+    background-color: #a6521a;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar ul li a,
+    .navbar ul li button {
+      width: 100%; /* Make buttons take full width on smaller screens */
+      text-align: center;
+    }
+  }
+  
+  
 }
-  .navbar ul li a:hover {
-    background-color: #555;
-  }
